@@ -8,6 +8,7 @@
   --logo-header-color: #000000;
   --btn-bg-color: #f5f4fa;
   --border-color: #eeeeee;
+  --icon-primary-color: #afb1b8;
 }
 
 p,
@@ -107,6 +108,8 @@ body {
 
 .header {
   border: 1px solid var(--border-color);
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .header-container {
@@ -133,6 +136,13 @@ body {
 .header-contacts-link {
   display: flex;
   padding: 32px 0;
+}
+
+.contacts-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .header-logo {
@@ -170,7 +180,14 @@ body {
 /* HERO */
 
 .hero {
-  background-color: var(--primary-bg-color);
+  max-width: 1600px;
+  margin: 0 auto;
+
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-container {
@@ -242,6 +259,22 @@ body {
   flex-basis: calc(100% / 4 - 30px);
 }
 
+.features-icon-container {
+  display: flex;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  background-color: var(--secondary-bg-color);
+  border-radius: 4px;
+}
+
+.features-icon {
+  width: 70px;
+  height: 70px;
+}
+
 .features-title {
   margin-bottom: 10px;
 
@@ -279,6 +312,8 @@ body {
 /* TEAM */
 
 .team {
+  max-width: 1600px;
+  margin: 0 auto;
   background-color: var(--secondary-bg-color);
 }
 
@@ -314,15 +349,99 @@ body {
 }
 
 .team-position {
+  margin-bottom: 16px;
+
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
   color: var(--secondary-text-color);
 }
 
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-item {
+  width: 44px;
+  height: 44px;
+}
+
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--third-text-color);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--icon-primary-color);
+}
+
+/* CUSTOMERS */
+
+.customers-list {
+  display: flex;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.customers-item {
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc(100% / 6 - 30px);
+}
+
+.customers-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+
+  border: 1px solid var(--icon-primary-color);
+  border-radius: 4px;
+}
+
+.customers-icon {
+  width: 106px;
+  height: 60px;
+
+  fill: var(--icon-primary-color);
+}
+
+.customers-link:hover,
+.customers-link:focus {
+  border-color: var(--accent-color);
+}
+
+.customers-link:hover .customers-icon,
+.customers-link:focus .customers-icon {
+  fill: var(--accent-color);
+}
+
 /* FOOTER */
 
 .footer {
+  max-width: 1600px;
+  margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
 
@@ -331,9 +450,12 @@ body {
 
 .footer-container {
   display: flex;
-  flex-direction: column;
 }
 
+.logo-adress-container {
+  display: flex;
+  flex-direction: column;
+}
 .footer-adress {
   font-size: 14px;
   line-height: calc(24 / 14);
@@ -362,6 +484,42 @@ body {
 .footer-contacts-link:hover,
 .footer-contacts-link:focus {
   color: var(--accent-color);
+}
+
+/* FOOTER JOIN US */
+
+.social-link-container {
+  width: 206px;
+  height: 80px;
+  margin-left: 70px;
+  margin-top: 12px;
+}
+
+.join-us {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+  color: var(--third-text-color);
+}
+
+.footer-social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-social-icon {
+  fill: var(--third-text-color);
 }
 
 /* PORTFOLIO MAIN*/
@@ -420,8 +578,12 @@ body {
   margin-top: 30px;
 }
 
-.projects-item:hover,
-.projects-item:focus {
+.projects-link {
+  display: block;
+}
+
+.projects-link:hover,
+.projects-link:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
